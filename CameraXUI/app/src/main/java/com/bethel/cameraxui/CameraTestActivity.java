@@ -18,7 +18,7 @@ import android.widget.Toast;
 /**
  'com.github.xuexiangjys:CameraView:1.0.3'
  */
-public class MainActivity extends AppCompatActivity {
+public class CameraTestActivity extends AppCompatActivity {
     // 申请相机权限的requestCode
     private static final int PERMISSION_CAMERA_REQUEST_CODE = 10;
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_camera_test);
         imageView = findViewById(R.id.imageView);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openCamera() {
-        CameraActivity.open(MainActivity.this, REQUEST_CODE_OPEN_CAMERA);
+        CameraActivity.open(CameraTestActivity.this, REQUEST_CODE_OPEN_CAMERA);
     }
 
     @Override
